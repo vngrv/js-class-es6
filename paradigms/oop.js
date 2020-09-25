@@ -33,11 +33,16 @@ class IsWholeRoot extends IsEven {
 class RuleFactory {
     solveByRule(array) {
         let tempArr = [];
+
         array.forEach(element => {
            tempArr.push(new IsEven(element, 2, 'Число четное'));
            tempArr.push(new IsDivideByThree(element, 3, 'Число делится на три'));
            tempArr.push(new IsWholeRoot(element, 2, 'Из числа можно получить целый корень'));
         });
+
+        // 64 * 3
+
+        // console.log(tempArr)
 
         tempArr.forEach(element => {
             element.resolve();
@@ -52,7 +57,7 @@ class Solver {
 
     get getResult() {
         let ruleFactory = new RuleFactory();
-        
+
         return ruleFactory.solveByRule(this.array);
     }
 
@@ -66,3 +71,8 @@ for(let i = 0; i < 64; i++) {
 
 let oop = new Solver(array);
 oop.getResult
+
+// Инкапсуляция
+// Абстракция
+// Наследование
+// Полиморфизм

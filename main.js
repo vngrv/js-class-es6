@@ -14,4 +14,4 @@ for(let i = 0; i < 64; i++) {
 // structural(array);
 // flags(array);
 // functional(array);
-new Solver(array);
+// new Solver(array);
